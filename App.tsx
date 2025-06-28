@@ -97,7 +97,6 @@ export default function App() {
     try {
       // Send message to Flask backend
       const response = await chatService.sendMessage(currentInput);
-      console.log('Server response:', response);
       
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),

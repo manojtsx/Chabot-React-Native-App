@@ -5,18 +5,12 @@ export const API_CONFIG = {
   COMPUTER_IP: 'http://192.168.100.111:5000',
   
   // Production URL (if you deploy your Flask app)
-  PRODUCTION: 'https://your-production-domain.com',
+  PRODUCTION: 'https://chatbot-flask-chat-api.vercel.app',
 };
 
 // Choose the appropriate URL based on your environment
 export const getApiUrl = () => {
-  // For web development
-  if (typeof window !== 'undefined') {
-    return API_CONFIG.LOCALHOST;
-  }
-  
-  // For mobile development (Expo)
-  return API_CONFIG.COMPUTER_IP;
+ return API_CONFIG.PRODUCTION;
 };
 
 export default getApiUrl(); 
